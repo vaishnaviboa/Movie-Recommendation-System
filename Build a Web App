@@ -1,0 +1,11 @@
+# app.py
+import streamlit as st
+
+st.title("🎬 Movie Recommender")
+
+movie_name = st.text_input("Enter a movie title:")
+if movie_name:
+    recommendations = recommend(movie_name)
+    st.write("Recommended Movies:")
+    for movie in recommendations:
+        st.write(movie)
